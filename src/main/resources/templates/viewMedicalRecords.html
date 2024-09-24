@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Medical Records</title>
+</head>
+<body>
+    <h1>Medical Records for Pet</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Vaccination History</th>
+                <th>Treatments</th>
+                <th>Allergies</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="record : ${medicalRecords}">
+                <td th:text="${record.vaccinationHistory}"></td>
+                <td th:text="${record.treatments}"></td>
+                <td th:text="${record.allergies}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

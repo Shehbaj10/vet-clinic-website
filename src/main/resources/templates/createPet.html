@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Pet Profile</title>
+</head>
+<body>
+    <h1>Create Pet Profile</h1>
+    <form th:action="@{/pets/create}" method="post" th:object="${pet}">
+        <label>Name:</label> <input type="text" th:field="*{name}" required/><br/>
+        <label>Species:</label> <input type="text" th:field="*{species}" required/><br/>
+        <label>Breed:</label> <input type="text" th:field="*{breed}" required/><br/>
+        <label>Age:</label> <input type="text" th:field="*{age}" required/><br/>
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

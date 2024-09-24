@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointments</title>
+</head>
+<body>
+    <h1>Appointments</h1>
+    <table>
+        <tr>
+            <th>Vet</th>
+            <th>Pet</th>
+            <th>Appointment Time</th>
+        </tr>
+        <tr th:each="appointment : ${appointments}">
+            <td th:text="${appointment.vetName}">Vet Name</td>
+            <td th:text="${appointment.petName}">Pet Name</td>
+            <td th:text="${appointment.appointmentTime}">Appointment Time</td>
+        </tr>
+    </table>
+</body>
+</html>
